@@ -60,25 +60,25 @@
         <div class="section-nav">
             <a href="#install">📥 التثبيت</a>
             <a href="#api-key">🔑 الحصول على API Key</a>
-            <a href="#login">🔐 Login</a>
-            <a href="#docs">📄 Documentation</a>
-            <a href="#tests">🧪 Testing</a>
-            <a href="#security">🛡️ Security</a>
-            <a href="#saas">☁️ SaaS Info</a>
-            <a href="#contact">📞 Contact</a>
+            <a href="#login">🔐 تسجيل الدخول</a>
+            <a href="#docs">📄 التوثيق</a>
+            <a href="#tests">🧪 الاختبارات</a>
+            <a href="#security">🛡️ الأمان</a>
+            <a href="#saas">☁️ معلومات المنصة</a>
+            <a href="#contact">📞 تواصل</a>
         </div>
 
         <!-- INSTALL -->
-        <h2 id="install">📥 التثبيتation</h2>
+        <h2 id="install">📥 التثبيت</h2>
         <div class="card">
             <pre><code>pip install docgen-docs docgen-emperor docgen-secure</code></pre>
-            <div class="result">✅ Successfully installed docgen-docs-1.0.5 docgen-emperor-1.0.7 docgen-secure-1.0.1</div>
+            <div class="result">✅ تم التثبيت بنجاح docgen-docs-1.0.5 docgen-emperor-1.0.7 docgen-secure-1.0.1</div>
         </div>
 
         <!-- API KEY -->
-        <h2 id="api-key">🔑 How to Get Your API Key</h2>
+        <h2 id="api-key">🔑 كيفية الحصول على API Key</h2>
         <div class="card">
-            <p>1. افتح منصة الويب: <code>http://127.0.0.1:5000</code> (or your hosted URL)</p>
+            <p>1. افتح منصة الويب: <code>http://127.0.0.1:5000</code> (أو رابط موقعك المستضيف)</p>
             <p>2. سجل أو ادخل</p>
             <p>3. اذهب إلى <strong>ملفي</strong> → <strong>مفاتيح API</strong></p>
             <p>4. انسخ المفتاح (صيغته: <code>Doc_xxxxxxxxxxxx</code>)</p>
@@ -93,8 +93,8 @@
             <pre><code>docgen-secure --login Doc_YOUR_API_KEY</code></pre>
             <div class="result">╔══════════════════════════════════════════════════╗
 ║      📄 DocGen Docs v3.1                     ║
-║  ✅ Login successful                     ║
-║  👤 username | 💎 Pro | 📊 72/2750              ║
+║  ✅ تم تسجيل الدخول بنجاح                     ║
+║  👤 username | 💎 محترف | 📊 72/2750              ║
 ╚══════════════════════════════════════════════════╝</div>
         </div>
 
@@ -107,11 +107,11 @@
                 <p><strong>الأمر:</strong></p>
                 <pre><code>docgen-docs psf/requests --lang=en</code></pre>
                 <p><strong>النتيجة:</strong></p>
-                <div class="result">📄 Generating all docs in EN for: psf/requests
+                <div class="result">📄 توليد كل التوثيق بالإنجليزية لـ: psf/requests
 ✅ README: psf/docs/README.md
 ✅ API Docs: psf/docs/API_DOCS.md
 ✅ Wiki: psf/docs/WIKI.md
-📁 Saved to: psf/docs</div>
+📁 تم الحفظ في: psf/docs</div>
             </div>
 
             <h3>📄 توليد README فقط</h3>
@@ -151,12 +151,12 @@
             <h3>🧪 توليد اختبارات لمستودع</h3>
             <div class="command-block">
                 <pre><code>docgen-test psf/requests</code></pre>
-                <div class="result">👑 Imperial Test Generator
-📁 Project: psf/requests
-👁️ Scanning complete: 125 files found
-✅ Tests: 528/528 passed (100%)
-✅ 528 tests generated
-📁 Saved to: ~/requests/tests/</div>
+                <div class="result">👑 مولد الاختبارات الإمبراطوري
+📁 المشروع: psf/requests
+👁️ اكتمل المسح: 125 ملف موجود
+✅ الاختبارات: 528/528 نجح (100%)
+✅ 528 اختبار تم توليده
+📁 تم الحفظ في: ~/requests/tests/</div>
             </div>
 
             <h3>🧪 توليد اختبارات لمجلد محلي</h3>
@@ -164,30 +164,30 @@
                 <pre><code>docgen-test src/</code></pre>
                 <div class="result">🧠 main.py: 1 functions, 0 classes
 🤲 test_main.py: 2 tests
-✅ Tests: 2/2 passed (100%)
-📁 Saved to: src/tests/</div>
+✅ الاختبارات: 2/2 نجح (100%)
+📁 تم الحفظ في: src/tests/</div>
             </div>
 
             <h3>🧪 إصلاح الاختبارات الفاشلة</h3>
             <div class="command-block">
                 <pre><code>docgen-test -f tests/</code></pre>
                 <div class="result">📜 test_main.py
-✅ Healed 2 tests</div>
+✅ تم الإصلاح 2 tests</div>
             </div>
 
             <h3>🧪 اختبارات تكامل بين ملفين</h3>
             <div class="command-block">
                 <pre><code>docgen-test -i src/auth.py src/db.py</code></pre>
                 <div class="result">🔗 auth.py ↔ db.py
-🤲 8 integration tests generated</div>
+🤲 8 integration اختبار تم توليده</div>
             </div>
 
             <h3>🧪 تقرير إحصائي</h3>
             <div class="command-block">
                 <pre><code>docgen-test -r</code></pre>
-                <div class="result">📊 Sessions: 6 | Tests: 22,150
-🔧 Fixes: 0 | ❌ Failed: 6
-📈 Rate: 0.0%</div>
+                <div class="result">📊 الجلسات: 6 | الاختبارات: 22,150
+🔧 الإصلاحات: 0 | ❌ فشل: 6
+📈 النسبة: 0.0%</div>
             </div>
 
             <h3>📁 أين تجد الاختبارات المتولدة</h3>
@@ -202,19 +202,19 @@
             <div class="command-block">
                 <pre><code>docgen-secure psf/requests --fast --en</code></pre>
                 <div class="result">╔══════════════════════════════════════════════════╗
-║ 🛡️ DocGen Secure v4.0 Report              ║
+║ 🛡️ DocGen Secure v4.0 تقرير              ║
 ║ Target: psf/requests                         ║
 ║ files: 37                                    ║
 ║ ⭐ Score: 2.0/10 | 🏆 F                    ║
-║ ⚠️ Capped: 7 critical issues found      ║
+║ ⚠️ محدد بـ: 7 مشكلة حرجة وجدت      ║
 ║ 🔴 Critical: 7 🟡 Medium: 526 🟢 Low: 285 ║
 ╚══════════════════════════════════════════════════╝
 
-📊 Project Insights:
+📊 رؤى المشروع:
 ├── ✅ Core: 19 files (51%)
-├── 🔴 Tests: 15 files (41%) | Critical: 7
+├── 🔴 الاختبارات: 15 files (41%) | Critical: 7
 
-🔴 CRITICAL (7):
+🔴 حرج (7):
   📁 tests/test_requests.py:1524 → Insecure Pickle
   💡 Use JSON serialization instead</div>
             </div>
@@ -237,13 +237,13 @@
             <h3>🛡️ تصدير HTML</h3>
             <div class="command-block">
                 <pre><code>docgen-secure src/ --format html --fast</code></pre>
-                <div class="result">📄 HTML Report saved: docgen_report.html</div>
+                <div class="result">📄 HTML تقرير saved: docgen_report.html</div>
             </div>
 
             <h3>🛡️ تصدير Markdown</h3>
             <div class="command-block">
                 <pre><code>docgen-secure src/ --format md --fast</code></pre>
-                <div class="result">📄 Markdown Report saved: docgen_report.md</div>
+                <div class="result">📄 Markdown تقرير saved: docgen_report.md</div>
             </div>
 
             <h3>🛡️ الوضع التفاعلي</h3>
@@ -269,22 +269,22 @@
                     <th style="padding:8px">طلبات شهرياً</th>
                 </tr>
                 <tr style="border-bottom:1px solid #30363d">
-                    <td style="padding:8px">🆓 Free</td>
+                    <td style="padding:8px">🆓 مجاني</td>
                     <td style="padding:8px">$0</td>
                     <td style="padding:8px">10</td>
                 </tr>
                 <tr style="border-bottom:1px solid #30363d">
-                    <td style="padding:8px">⭐ Basic</td>
+                    <td style="padding:8px">⭐ أساسي</td>
                     <td style="padding:8px">$9</td>
                     <td style="padding:8px">50</td>
                 </tr>
                 <tr style="border-bottom:1px solid #30363d">
-                    <td style="padding:8px">💎 Pro</td>
+                    <td style="padding:8px">💎 محترف</td>
                     <td style="padding:8px">$19</td>
                     <td style="padding:8px">150</td>
                 </tr>
                 <tr>
-                    <td style="padding:8px">👑 Unlimited</td>
+                    <td style="padding:8px">👑 غير محدود</td>
                     <td style="padding:8px">$39</td>
                     <td style="padding:8px">300</td>
                 </tr>
